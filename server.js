@@ -3,7 +3,7 @@ const cors = require('cors');
 const Student = require('./models/studentModel')
 const app = express()
 const port = 3000
-require('./connection')
+// require('./connection')
 
 
 app.use(cors({
