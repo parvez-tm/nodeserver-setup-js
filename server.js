@@ -7,9 +7,13 @@ require('./connection')
 
 
 app.use(cors({
-    origin: 'http://localhost:4200',
+    // origin: 'http://localhost:4200',
+    origin: '*',
   }));
 
+app.get('/hello',(req,res)=>{
+    res.send('Hello');
+})
 app.use(express.json())
 app.use(require('./routes/studentRoutes'))
 
