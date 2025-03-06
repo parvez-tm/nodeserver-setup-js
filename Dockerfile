@@ -5,7 +5,7 @@ WORKDIR /src
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 
-RUN node index.js
+RUN node server.js
 
 COPY . .
 
