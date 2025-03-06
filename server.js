@@ -12,7 +12,7 @@ app.use(cors({
   }));
 
 app.get('/hello',(req,res)=>{
-    res.send('Hello Ptm K');
+    res.send('Hello Ptm K http://141.148.201.28/');
 })
 app.use(express.json())
 // app.use(require('./routes/studentRoutes'))
