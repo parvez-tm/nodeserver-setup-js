@@ -12,7 +12,7 @@ app.use(cors({
   }));
 
 app.get('/hello',(req,res)=>{
-    res.send('Hello Ptm');
+    res.send('Hello Ptm K');
 })
 app.use(express.json())
 // app.use(require('./routes/studentRoutes'))
