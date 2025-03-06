@@ -1,14 +1,20 @@
-FROM node:23-alpine
+# Use Node.js image
+FROM node:18
 
-WORKDIR /src
+# Set working directory inside the container
+WORKDIR /app
 
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-RUN npm start
+# Install dependencies
+RUN npm install
 
+# Copy all project files
 COPY . .
 
+# Expose port 3000
 EXPOSE 3000
 
-CMD npm start
+# Start the server
+CMD ["node", "server.js"]
